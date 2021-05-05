@@ -90,3 +90,8 @@ main {
   width: 80%;
   margin: 20px auto;
 }
+@media all and (max-width: 600px) {
+  header nav {
+    display: none;
+  }
+}
