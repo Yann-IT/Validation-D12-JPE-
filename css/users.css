@@ -33,14 +33,18 @@ a:hover {
   background-color: #2e5a49;
   color: white;
 }
+p {
+  line-height: 30px;
+}
 p > a {
-  padding: 10px;
+  padding: 4px 10px;
 }
 header {
   position: sticky;
   top: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   top: 0px;
   padding: 20px;
   background-color: #e7f0ff;
@@ -74,12 +78,29 @@ header #logo:hover::after {
   width: 100%;
   background-color: black;
 }
-header nav ul {
+header > nav ul {
   display: flex;
+  z-index: 300;
   margin: 0;
+  background-color: #e7f0ff;
 }
-header nav ul li {
+header > nav ul li {
   margin: 10px;
+}
+header #burger {
+  display: none;
+  position: absolute;
+  z-index: 400;
+  top: 10px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background-image: url('../img/menu.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+header #burger.checked {
+  background-image: url('../img/close.svg');
 }
 footer {
   display: flex;
@@ -94,8 +115,26 @@ main {
   margin: 20px auto;
 }
 @media all and (max-width: 750px) {
+  header #burger {
+    display: block;
+  }
   header nav {
     display: none;
+  }
+  header nav.show {
+    display: block;
+  }
+  header nav ul {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding-top: 40px;
+    flex-direction: column;
+    align-items: flex-end;
+    box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.3);
+  }
+  header nav ul li {
+    margin: 20px;
   }
 }
 .table-container {
