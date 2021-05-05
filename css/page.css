@@ -3,17 +3,24 @@ body {
   padding: 0px;
   background-color: #e7f0ff;
   font-family: Roboto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+h1 {
+  margin: 0;
 }
 ul {
   list-style-type: none;
 }
 ul li {
-  padding: 50px;
+  margin: 50px;
 }
 a {
   color: black;
   font-weight: bold;
-  padding: 20px 80px 20px 30px;
+  padding: 10px 50px;
   border-radius: 50px;
   text-decoration: none;
   border: 1px solid black;
@@ -35,62 +42,58 @@ header {
   padding: 20px;
   background-color: #e7f0ff;
   box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.3);
-}
-header a {
-  padding: 20px 50px;
+  z-index: 100;
 }
 header #logo {
   font-size: 24px;
   border: unset;
+  color: #2e5a49;
+  position: relative;
+  margin: 20px 50px;
+  padding: 0;
+}
+header #logo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #2e5a49;
+  z-index: 200;
+  transition: all 0.3s;
 }
 header #logo:hover {
   background-color: unset;
-  color: #2e5a49;
+  color: black;
 }
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-nav a::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 20px;
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
-  background-color: grey;
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "a b" "c d";
-  width: 500px;
-  height: 500px;
-  padding: 50px;
-}
-.grid-container img {
-  background-color: grey;
-  height: 100%;
+header #logo:hover::after {
   width: 100%;
+  background-color: black;
 }
-.grid-container .a {
-  grid-area: a;
-  background-color: red;
+header nav ul {
+  display: flex;
+  margin: 0;
 }
-.grid-container .b {
-  grid-area: b;
-  background-color: blue;
+header nav ul li {
+  margin: 10px;
 }
-.grid-container .c {
-  grid-area: c;
-  background-color: green;
+footer {
+  display: flex;
+  justify-content: flex-end;
+  background-color: hsl(217, 9%, 80%);
 }
-.grid-container .d {
-  grid-area: d;
-  background-color: grey;
+footer * {
+  margin: 10px 20px;
+}
+main {
+  width: 80%;
+  margin: 20px auto;
+}
+.card {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.card p {
+  margin: 0;
 }
