@@ -154,6 +154,9 @@ main {
   text-align: center;
 }
 @media all and (max-width: 600px) {
+  section > nav {
+    width: 100%;
+  }
   .grid-container {
     display: none;
   }
