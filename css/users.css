@@ -1,0 +1,119 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #e7f0ff;
+  font-family: Roboto;
+}
+h1 {
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+}
+ul li {
+  padding: 50px;
+}
+a {
+  color: black;
+  font-weight: bold;
+  padding: 20px 80px 20px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 1px solid black;
+  transition: background-color 0.3s, color 0.3s;
+  line-height: 0;
+  position: relative;
+  white-space: nowrap;
+}
+a:hover {
+  background-color: #2e5a49;
+  color: white;
+}
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  top: 0px;
+  padding: 20px;
+  background-color: #e7f0ff;
+  box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.3);
+}
+header a {
+  padding: 20px 50px;
+}
+header #logo {
+  font-size: 24px;
+  border: unset;
+}
+header #logo:hover {
+  background-color: unset;
+  color: #2e5a49;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: grey;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "a b" "c d";
+  width: 500px;
+  height: 500px;
+  padding: 50px;
+}
+.grid-container img {
+  background-color: grey;
+  height: 100%;
+  width: 100%;
+}
+.grid-container .a {
+  grid-area: a;
+  background-color: red;
+}
+.grid-container .b {
+  grid-area: b;
+  background-color: blue;
+}
+.grid-container .c {
+  grid-area: c;
+  background-color: green;
+}
+.grid-container .d {
+  grid-area: d;
+  background-color: grey;
+}
+.table-container {
+  margin: 50px 0px;
+  overflow-x: auto;
+}
+.table {
+  margin: 0px auto;
+  background-color: #fff;
+  border-collapse: collapse;
+  overflow: auto;
+}
+.table th,
+.table td {
+  padding: 4px 10px;
+}
+.table thead {
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+}
+.table tbody tr:nth-child(odd) {
+  background-color: rgba(200, 200, 200, 0.3);
+}
