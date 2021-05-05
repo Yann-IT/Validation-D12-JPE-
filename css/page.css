@@ -90,7 +90,7 @@ main {
   width: 80%;
   margin: 20px auto;
 }
-@media all and (max-width: 600px) {
+@media all and (max-width: 750px) {
   header nav {
     display: none;
   }
